@@ -11,23 +11,23 @@ public class Main extends JFrame {
     }
 
     class Canvas extends JPanel {
+      Grid grid;
       public Canvas() {
         setPreferredSize(new Dimension(720, 720));
+        grid = new Grid(10,10,20,20);
       }
 
       @Override
       public void paint(Graphics g) {
 	g.setColor(java.awt.Color.BLACK);
 	g.drawRect(10, 10, 700, 700);
-for (int i = 0; i < 20; i++); {
-  for (int k = 0; k < 20; k++);
-  g.drawRect(10, 10, 50, 50);
+  grid.paint(g);
+  getMousePosition();
 
 }
 
 
       }
-    }
 
     private Main() {
       this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
